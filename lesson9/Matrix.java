@@ -37,4 +37,15 @@ public class Matrix {
         System.out.println(Arrays.deepToString(matrix));
         return o;
     }
+
+    Matrix multiple(int[][] matrix, int[][] matrix1, int num) {
+        Matrix o = new Matrix(strings, columns);
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1.length; j++) {
+                matrix[i][j] = matrix1[i][j] * num;
+            }
+        }
+        System.out.println(Arrays.deepToString(matrix));
+        return o;
+    }
 }
