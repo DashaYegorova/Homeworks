@@ -8,6 +8,8 @@ public class Person {
     }
 
     Person(String fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
     }
 
     void move(Person p) {
