@@ -1,5 +1,7 @@
 package lesson10;
 
+import java.util.Arrays;
+
 public class Reader {
 
     private static int[] count;
@@ -89,19 +91,19 @@ public class Reader {
     }
 
     void takeBook(String... bookTitle) {
-        System.out.println(fullName + " взял книги: " + bookTitle);
+        System.out.println(fullName + " взял книги: " + Arrays.toString(bookTitle));
     }
 
     void returnBook(String... bookTitle) {
-        System.out.println(fullName + " вернул книги: " + bookTitle);
+        System.out.println(fullName + " вернул книги: " + Arrays.toString(bookTitle));
     }
 
     void takeBook(Book... books) {
-        System.out.println(fullName + " взял книги: " + books);
+        System.out.println(fullName + " взял книги: " + Arrays.toString(books));
     }
 
     void returnBook(Book... books) {
-        System.out.println(fullName + " вернул книги: " + books);
+        System.out.println(fullName + " вернул книги: " + Arrays.toString(books));
     }
 
 
