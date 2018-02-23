@@ -3,8 +3,6 @@ package lesson10;
 import java.util.Arrays;
 
 public class Reader {
-
-    private static int[] count;
     private String fullName;
     private int id;
     private String department;
@@ -12,27 +10,15 @@ public class Reader {
     private String phoneNumber;
 
     Reader() {
-//        for (int i = 0; i < count.length; i++) {
-//            count[i] = i++;
-//        }
-
     }
 
     Reader(String fullName, int id, String department, String birthDay, String phoneNumber) {
-//       for (int i = 0; i < count.length; i++) {
-//            count[i] = i++;
-//        }
         this.fullName = fullName;
         this.id = id;
         this.department = department;
         this.birthDay = birthDay;
         this.phoneNumber = phoneNumber;
     }
-
-    public static int[] getCount() {
-        return count;
-    }
-
 
     public String getFullName() {
         return fullName;
