@@ -45,4 +45,11 @@ public class Student {
         this.averageMark = averageMark;
     }
 
+    public int getScholarship() {
+        if (averageMark == 5) {
+            return 100;
+        } else {
+            return 80;
+        }
+    }
 }

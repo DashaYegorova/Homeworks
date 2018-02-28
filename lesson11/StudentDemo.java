@@ -11,5 +11,10 @@ public class StudentDemo {
         System.out.println(student1.getFirstName() + student1.getLastName() + " " + student1.getAverageMark()
                 + " " + student1.getGroup() + " " + student2.getFirstName() + " " + aspirant1.getFirstName()
                 + " " + aspirant1.getScienceWork());
+
+        Student[] students = {student1, aspirant1, student2};
+        for (Student student : students) {
+            System.out.println(student.getFirstName() + " " + student.getLastName() + " - " + student.getScholarship());
+        }
     }
 }
