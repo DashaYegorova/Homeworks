@@ -15,28 +15,24 @@ public class Matrix {
 
     }
 
-
-
     Matrix plus(Matrix matrix) {
         int[][] result = new int[strings][columns];
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
                 result[i][j] = this.array[i][j] + matrix.array[i][j];
             }
         }
-        System.out.println(Arrays.deepToString(result));
         Matrix o = new Matrix(result);
         return o;
     }
 
     Matrix multiple(int num) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
                 this.array[i][j] *= num;
 
             }
         }
-        System.out.println(Arrays.deepToString(array));
         Matrix o = new Matrix(array);
         return o;
     }
@@ -46,7 +42,7 @@ public class Matrix {
         return "Matrix{" +
                 "strings=" + strings +
                 ", columns=" + columns +
-                ", array=" + Arrays.toString(array) +
+                ", array=" + Arrays.deepToString(array) +
                 '}';
     }
 }

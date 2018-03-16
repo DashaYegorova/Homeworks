@@ -8,9 +8,9 @@ public class MatrixDemo {
         Matrix z = new Matrix(a);
         Matrix d = new Matrix(a);
         Matrix multipleResult = z.multiple(6);
-        multipleResult.toString();
+        System.out.println(multipleResult);
         Matrix plusResult = z.plus(d);
-        plusResult.toString();
+        System.out.println(plusResult);
 
     }
 }
