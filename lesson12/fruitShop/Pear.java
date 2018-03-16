@@ -1,4 +1,4 @@
-package lesson12.FruitShop;
+package lesson12.fruitShop;
 
 public class Pear extends Fruit {
     private double cost;

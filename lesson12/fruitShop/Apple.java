@@ -1,9 +1,9 @@
-package lesson12.FruitShop;
+package lesson12.fruitShop;
 
-public class Apricot extends Fruit {
+public class Apple extends Fruit {
     private double cost;
 
-    public Apricot(double weight, double cost) {
+    public Apple(double weight, double cost) {
         super(weight);
         this.cost = cost;
     }

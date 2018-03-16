@@ -4,7 +4,7 @@ public class Person {
     String fullName;
     int age;
 
-    Person() {
+    public Person() {
     }
 
     Person(String fullName, int age) {

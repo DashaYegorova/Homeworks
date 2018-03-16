@@ -1,51 +1,52 @@
 package lesson9;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Matrix {
     int strings, columns;
-    int[][] array = new int[strings][columns];
+    int[][] array;
 
 
-    Matrix(int strings, int columns) {
-        this.strings = strings;
-        this.columns = columns;
+    Matrix(int[][] array) {
+        this.array = array;
+        this.strings = array.length;
+        this.columns = array[0].length;
 
     }
 
 
-    Matrix print() {
-        Matrix o = new Matrix(strings, columns);
-        int i, j, k = 0;
-        for (i = 0; i < strings; i++) {
-            for (j = 0; j < columns; j++) {
-                array[i][j] = k++;
+
+    Matrix plus(Matrix matrix) {
+        int[][] result = new int[strings][columns];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                result[i][j] = this.array[i][j] + matrix.array[i][j];
+            }
+        }
+        System.out.println(Arrays.deepToString(result));
+        Matrix o = new Matrix(result);
+        return o;
+    }
+
+    Matrix multiple(int num) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                this.array[i][j] *= num;
+
             }
         }
         System.out.println(Arrays.deepToString(array));
+        Matrix o = new Matrix(array);
         return o;
     }
 
-
-    Matrix plus(int[][] matrix, int[][] matrix1, int[][] matrix2) {
-        Matrix o = new Matrix(strings, columns);
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1.length; j++) {
-                matrix[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
-        }
-        System.out.println(Arrays.deepToString(matrix));
-        return o;
-    }
-
-    Matrix multiple(int[][] matrix, int[][] matrix1, int num) {
-        Matrix o = new Matrix(strings, columns);
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1.length; j++) {
-                matrix[i][j] = matrix1[i][j] * num;
-            }
-        }
-        System.out.println(Arrays.deepToString(matrix));
-        return o;
+    @Override
+    public String toString() {
+        return "Matrix{" +
+                "strings=" + strings +
+                ", columns=" + columns +
+                ", array=" + Arrays.toString(array) +
+                '}';
     }
 }
