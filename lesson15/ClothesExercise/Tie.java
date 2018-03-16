@@ -10,8 +10,8 @@ public class Tie extends Clothes implements ManClothes {
     }
 
     @Override
-    public void toDressMan(Clothes[] clothes) {
-
+    public void toDressMan() {
+        System.out.println("Надеваю галстук.");
     }
 
     @Override

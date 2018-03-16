@@ -7,13 +7,13 @@ public class Shirt extends Clothes implements ManClothes, WomanClothes {
     }
 
     @Override
-    public void toDressMan(Clothes[] clothes) {
-
+    public void toDressMan() {
+        System.out.println("Надеваю футболку.");
     }
 
     @Override
-    public void toDressWoman(Clothes[] clothes) {
-
+    public void toDressWoman() {
+        System.out.println("Надеваю футболку.");
     }
 
     @Override

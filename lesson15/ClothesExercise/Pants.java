@@ -6,13 +6,13 @@ public class Pants extends Clothes implements ManClothes, WomanClothes {
     }
 
     @Override
-    public void toDressMan(Clothes[] clothes) {
-
+    public void toDressMan() {
+        System.out.println("Надеваю штаны.");
     }
 
     @Override
-    public void toDressWoman(Clothes[] clothes) {
-
+    public void toDressWoman() {
+        System.out.println("Надеваю штаны.");
     }
 
     @Override

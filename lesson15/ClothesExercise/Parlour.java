@@ -8,24 +8,24 @@ public class Parlour {
         Tie tie = new Tie(ClothesSize.S, 1.2, "purple");
 
         Clothes[] clothes = {shirt, pants, skirt, tie};
-        tie.toDressMan(clothes);
+        toDressMan(clothes);
+        toDressWoman(clothes);
     }
 
 
-    public void toDressMan(Clothes[] clothes) {
+    public static void toDressMan(Clothes[] clothes) {
         for (Clothes c : clothes) {
             if (c instanceof ManClothes) {
-                System.out.println(c.getSize() + c.getColor() + c.getCost());
-                c.toString();
+                ((ManClothes) c).toDressMan();
             }
         }
     }
 
 
-    public void toDressWoman(Clothes[] clothes) {
+    public static void toDressWoman(Clothes[] clothes) {
         for (Clothes c : clothes) {
             if (c instanceof WomanClothes) {
-                c.toString();
+                ((WomanClothes) c).toDressWoman();
             }
         }
     }
