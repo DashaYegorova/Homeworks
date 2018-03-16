@@ -1,4 +1,4 @@
-package lesson11.Flowers;
+package lesson11.flowers;
 
 public class Flower {
     private static int count;

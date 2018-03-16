@@ -1,6 +1,4 @@
-package lesson11.Flowers;
-
-import lesson11.Flowers.Flower;
+package lesson11.flowers;
 
 public class Tulip extends Flower {
 
