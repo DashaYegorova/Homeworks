@@ -61,7 +61,7 @@ public class Toy {
     }
 
     public void play() {
-        System.out.println(getAction());
+        System.out.println("Эта игрушка делает " + getAction());
     }
 
     public static void main(String[] args) {
@@ -70,9 +70,11 @@ public class Toy {
         Toy toy3 = new Toy("Dog", 4.5, "bark");
         Toy toy4 = new Toy("Bird", 3.4, "tweet");
         Toy[] toys = {toy1, toy2, toy3, toy4};
-        System.out.println(totalCost(toys));
-        System.out.println(getCount());
-        System.out.println(toy1.getAction());
+        System.out.println("Общее количество всех игрушек " + totalCost(toys));
+        System.out.println("Общее количество игрушек " +getCount());
+        for (Toy toy : toys) {
+            toy.play();
+        }
     }
 
     @Override
