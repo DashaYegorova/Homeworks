@@ -16,6 +16,14 @@ public class HeavyBox extends Box6 implements Comparable<HeavyBox> {
         this.weight = weight;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
     @Override
     public int compareTo(HeavyBox heavyBox) {
         return this.weight - heavyBox.weight;
